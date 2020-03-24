@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 ADD . /app
 
-RUN yum -y install gcc gmp python-devel
-RUN yum -y install python2-pip
+RUN yum -y install gcc gmp python3-devel
+RUN yum -y install python3-pip
 
 # Run pip install when the container launches
-CMD ["pip2", "install", "--target", "/out", "pycryptodome"]
+CMD ["pip3", "install", "--target", "/out", "pycryptodome"]
